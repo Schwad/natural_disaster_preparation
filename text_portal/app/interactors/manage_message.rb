@@ -6,10 +6,9 @@
 class ManageMessage
   include Interactor::Organizer
 
-  organize VerifyUser, SendBritishHeadlines
+  organize VerifyUser, Help, SendBritishHeadlines, Weather, Directions, SomethingWrong
 
   # To Include:
-  # - HelpResponse
-  # - Update Subscriptions
-  # - Manage Queries
+  # Weather
+  # Directions
 end

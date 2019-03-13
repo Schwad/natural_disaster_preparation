@@ -47,16 +47,18 @@
   </head>
   <body>
     <textarea id="source">
-
       name: primary-slide
 
       ---
+      template: primary-slide
       class: left
 
       # Preparing for a Natural Disaster Using Ruby and Stealth
       .left[![ruby](https://rebornix.gallerycdn.vsassets.io/extensions/rebornix/ruby/0.17.0/1520198344144/Microsoft.VisualStudio.Services.Icons.Default)]
+
       ---
       template: primary-slide
+      class: top, right
 
       # Order of the day:
 
@@ -114,67 +116,102 @@
       template: primary-slide
       class: center, middle
       # .strong[1]
-      # Anatomy of a natural disaster
+      # Problems waiting to happen
 
       ---
       template: primary-slide
-      class: center
+      class: center, middle
 
-      .center[# SCREENSHOT OF UK DATA FAILURE WITH DATA IN NOTES]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# 🤔]
+      .center[![:scale 100%](https://i.imgur.com/wL6aY0e.png)]
 
       ???
 
-      This is something that can happen in everyday life, even without extraordinary circumstances. what sort of impacts can it have? Think about that for a second
+      Go over what happened, and the impacts that can happen in NORMAL life
+
+      * get to meeting
+      * flight checkin
+      * see weather
 
       ---
       template: primary-slide
-      class: center
+      class: center, middle
 
-      .center[# PICTURE OF AIRPLANE, TALK ABOUT ONLINE FLIGHT CHECKIN]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# PICTURE OF TUBE, TALK ABOUT BEING IN A CITY AND NAVIGATING AROUND]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# PICTURE OF TV PERSON, LOSE ACCESS TO INFORMATION FROM OUTSIDE WORLD, TALK ABOUT HOW WE USED THE RADIO]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# Next Level: Natural Disaster (w/picture)]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
+      .center[![:scale 100%](https://img-aws.ehowcdn.com/877x500p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/2439e5e021ae4f229f2e25b029002e6e)]
 
       ???
 
-      Cover off how bad it would be plus if shit were going down
+      Extend this in a natural disaster
+
+      * news reports
+      * critical information from government
+      * weather if everything's out
+      * how to get from A to B
 
       ---
       template: primary-slide
       class: center, middle
       # .strong[2]
-      # Solving this Problem with Ruby, Twilio and Stealth
+      # Solving this Problem with Ruby, and Twilio
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/qxGVo35.png)]
+
+      ???
+
+      article 1
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/tdgWSeX.png)]
+
+      ???
+
+      article 2 - LESS INTENSIVE ON INFRASTRUCTURE THAN DATA OR VOICE
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/dX1Ut7n.png)]
+
+      ???
+
+      article 3
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/TWby3B2.png)]
+
+      ???
+
+      article 4 - CAN BE STORED
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/4QuXq8n.png)]
+
+      ???
+
+      example app 1
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/25oH5MJ.png)]
+
+      ???
+
+      example app 2
 
       ---
       template: primary-slide
@@ -184,654 +221,260 @@
 
       ???
 
+      What do we need? why SMS?
+
       Before you dive into technical requirements, actually hash out *what* you want to be solving. For me it's a lack of connection to the outside world. Data is dead. Wifi is dead. How can I leverage my tech skills to advance?
 
       ---
       template: primary-slide
-      class: center
-
-      .center[# PHOTO OF TWILIO AND RUBY]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# PHOTO OF RAILS]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# GETTING SMS OUT]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# GETTING SMS IN]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# INTERACTOR PATTERN FOR MSG HANDLING]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# BUILDING BLOCKS FOR EXTENSIONS]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# EXTENSION EXAMPLES]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# TELL THE STORY OF 3+ EXTENSIONS GRADUALLY IMPROVING (MAYBE TRAFFIC ANNOUNCEMENTS FIRST) THEN SHOW IT'S COMPLETELY EXTENSIBLE. FOLLOW SCREENSHOTS]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-#############################
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# What is Avascular Necrosis?]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# What is Avascular Necrosis?]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# What is Avascular Necrosis?]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# What is Avascular Necrosis?]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# What is Avascular Necrosis?]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
       class: center, middle
-      # EVERYTHING FROM HERE IS OLD TALK
 
-      ---
-
-      class: center, middle
-      .biggester[🤕 🚑]
-
-      ---
-      template: primary-slide
-      class: center
-
-      .center[# What is Avascular Necrosis?]
-
-      .center[![This is my image](https://i2.wp.com/shoulderelbow.org/wp-content/uploads/2016/09/avascular-necrosis-happens.jpg?resize=748%2C561&ssl=1)]
-
-      ---
-      template: primary-slide
-      class: center, middle
-      .biggester[❗️]
+      .center[![:scale 100%](https://i.imgur.com/XAs0PA6.png)]
 
       ???
 
-      Dr. Said that the pressure swings will affect joint pain.
-
-      ---
-      template: primary-slide
-
-      class: center, top
-      .biggester[❓]
-
-      .biggester[🤔]
-
-      ???
-
-      My hypothesis
-
-      --
-      ## Pain: nearly unpredictable
-      --
-
-      ## Pressure systems: <u>.strong[very]</u> predictable
-      ---
-      template: primary-slide
-      class: center, middle
-      # Negotiation time
-      ![:scale 90%](https://ak3.picdn.net/shutterstock/videos/3780503/thumb/1.jpg?i10c=img.resize(height:160))
-
-      ???
-
-      Striking a deal with laura. It's all about compromise.
-
-      ---
-      template: primary-slide
-
-      # She would help me track and measure her pain 📈 ✔️
-
-      --
-
-      # I would start counting my caloric intake every day 😱 🍪
-
-      ---
-      template: primary-slide
-      class: center, middle
-      # .strong[2]
-      # Solving this problem, with the aid of Ruby & Twilio
-
-      ---
-
-      # .center[Goal]
-      --
-
-      * ### Identify as many pain readings as possible
-      --
-
-      * ### Marry pain reading to barometrict pressure
-      --
-
-      * ### Process readings for assessment & forecasting
-
-      ---
-      template: primary-slide
-      class: middle, center
-      # Set Up
-      ---
-      template: primary-slide
-      class: center, top
-      # .center[A Web UI for this application was out of scope. .biggest[🚫]]
-      --
-
-      <br>
-      # Solution: Twilio & SMS
-      ![:scale 50%](https://i.imgur.com/ePdc97h.png)
-
-      ---
-      template: primary-slide
-
-      # One smooth ride
-      ```ruby
-      # Taken directly from twilio documentation
-      require 'twilio-ruby'
-
-      account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Acct. SID
-      auth_token = "your_auth_token"   # Auth token
-
-      @client = Twilio::REST::Client.new account_sid, auth_token
-      message = @client.messages.create(
-          body: "Hello from Ruby",
-          to: "+12345678901",    # Replace with your phone number
-          from: "+12345678901")  # Replace with your Twilio number
-
-      puts message.sid
-      ```
-
-      ???
-
-      I am not a twilio expert.
-
-      That's the point.
-
-      Setup was slick and painless.
-
-      Slightly more involved process for Rails integrations but nothing you
-      couldn't hack in a half hour and simply forget about.
-
-      ---
-      template: primary-slide
-      class: center
-      # Weather Underground
-
-      .center[![wu-logo](https://i.imgur.com/u1T8vO4.png)]
-
-      ???
-
-      25,000 independent weather stations data since the 90s, great interface
-
-      ---
-      template: primary-slide
-      ## sdague/weather-underground.rb
-
-      .center[![:scale 100%](https://i.imgur.com/LiN8KWL.png)]
-
-      ???
-
-      Gem is simple, straightforward, already a ruby path for this
-
-      ---
-      template: primary-slide
-
-      # Barometric pressure measurement:
-      --
-
-      * ###SI: 101kPa (1 pascal = 1 newton per square metre, 1 N/m2)
-      --
-
-      * ###USA: 15psi
-      --
-
-      * ###Inches of Mercury: 29.53"
-      --
-
-      * ###Millibars: 1013.25 mbar 🤔
-      --
-
-      * ###Atm: 1
-
-      ???
-
-      articulate a bit more between 'metric' and si approved
-
-      ---
-      template: primary-slide
-
-      # Simple object
-
-      ```ruby
-      #<DataPoint:0x00000005e89a18> {
-                         :id => 115,
-        :barometric_pressure => 1014.56146291907,
-                 :pain_level => 4.0,
-                 :created_at => Sun, 17 Sep 2017 10:26:31 UTC +00:00,
-                 :updated_at => Sun, 17 Sep 2017 10:26:31 UTC +00:00
-      }
-      ```
-
-      ---
-      template: primary-slide
-
-      # Simple object
-
-      ```ruby
-      #<DataPoint:0x00000005e89a18> {
-                         :id => 115,
-        :barometric_pressure => 1014.56146291907, # <---What I care
-                 :pain_level => 4.0,              # <---about
-                 :created_at => Sun, 17 Sep 2017 10:26:31 UTC +00:00,
-                 :updated_at => Sun, 17 Sep 2017 10:26:31 UTC +00:00
-      }
-      ```
+      example app 2
 
       ---
       template: primary-slide
       class: center, middle
 
-      # Difficulty level: .strong[Hard]
+      .center[![:scale 100%](https://i.imgur.com/z1H2tFQ.png)]
 
       ???
 
-      Most tricky part isn't the modeling or integrations but interacting with the user
+      example app 2
 
       ---
       template: primary-slide
-
-      # The core flow:
-
-      --
-
-      * ###Random messaging 5x/day ✉️
-      --
-
-      * ###Capture pain reading 📈
-      --
-
-      * ###Marry reading to live barometric pressure 🌪
-      --
-
-      * ###Handle as many edge cases as possible 😰
-
-      ???
-
-      Explain the randomness of the flow with a rake task here and why it's important.
-
-      ---
-      template: primary-slide
-
-      class: center
-      # Unexpected user inputs
-      --
-      .left[# 'F OFF']
-      ---
-      template: primary-slide
-      class: top
-      # .center[Unexpected user inputs]
-
-      # .left[#'F OFF'.to_i == 0]
-      --
-
-      ```ruby
-      if angry_response
-        "Huh. Okay. I don't think #{pain_level} is quite right..."
-      end
-      ```
-      --
-      # .left[66]
-
-      --
-      .left[##Inline adjustments, and data post-processing]
-
-      ???
-
-      Some things were dealt with with inline realtime improvements and some with data sanitizing at the end.
-
-      ---
-      template: primary-slide
-
       class: center, middle
-      # Encourage user input
 
-      ---
+      .center[![:scale 100%](https://i.imgur.com/P9GuUxv.png)]
 
-      # Giphy integration
+      ???
 
-      .center[![:scale 68%](https://i.imgur.com/RYwKQOI.gif)]
-      ---
-      template: primary-slide
-
-      ## Hook up response
-      ```ruby
-      type = ['funny', 'cat', 'dancing'].sample
-      gif = RestClient.get("#{giphy_path_builder}#{type}#{settings}")
-      selector = (0..23).to_a.sample
-      "Saved! #{JSON.parse(gif)['data'][selector]['bitly_gif_url']}"
-      ```
-      --
-      ## Result:
-      ### Saved!
-      ![:scale 31%](https://i.imgur.com/CsTZTFL.gif)
+      example app 2
 
       ---
       template: primary-slide
+      class: center, middle
 
-      ## Ensure that the response was sensitive to the situation
-      --
+      .center[![:scale 100%](https://i.imgur.com/5T54jog.png)]
 
+      ???
 
-      ```ruby
-      if pain_level.to_f >= 7.0
-        painful_message
-        # Note: Gifs were *never* appropriate on high-pain days.
-      elsif pain_level.to_f < 4.0
-        [less_pain_message, gif_message].sample
-      else
-        [middle_pain_message, gif_message].sample
-      end
-      ```
+      example app 2
 
       ---
       template: primary-slide
-      # Light hearted on the easier days
+      class: center, middle
 
-      ```ruby
-      def less_pain_message
-        [
-          'Successfully saved. Thanks for putting up with this app, it means a lot to nick',
-          'Data has been logged. Wow, we are gonna have a good chunk of data points!',
-          'Saved. You probably think this is all a bunch of random messages nick entered. NOPE! I\'m real! I live inside your phone! help!',
-          'Saved! Hope that your pain levels stay low bee bop!',
-          'Saved- fingers crossed your numbers stay good',
-          'Boom! Loving those low numbers. Hope it stays low!',
-          'Got it saved. Wonder if the pressure is working in your favor?'
-        ].sample
-      end
-      ```
+      .center[![:scale 100%](https://i.imgur.com/p0lHzOo.png)]
+
+      ???
+
+      NOW TO RECEIVE, add an endpoint
+
       ---
-
       template: primary-slide
+      class: center, middle
 
-      # Support on the rough days
+      .center[![:scale 100%](https://i.imgur.com/rcBMY6V.png)]
 
-      ```ruby
-      def painful_message
-        ['This saved, but honey are you okay? Tell nick you just wanna chill tonight.',
-          'I have got this in the system. Sorry you are hurting :(',
-          'Saved successfully. I hope you are not fed up with this app, just know that the information you provide could be really, really helpful.',
-          'Logged! Fingers crossed that these numbers will go down after the surgery...',
-          'Saved. Thank you for being so good about sending this data in...',
-          'Got it. Be sure to take it easy and not push yourself if you are sore!',
-          'You should take a night off on the couch and make nick cook and clean and get you lots of tea. Modern Family night?'
-        ].sample
-      end
-      ```
+      ???
+
+      Point to it in twilio and good to go. This is in production now but very workable
+
+      ---
+      template: primary-slide
+      class: center, middle
+      # .strong[Service One: Checking the news]
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/N8DN5se.png)]
+
+      ???
+
+      example app 2
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/5SkzUli.png)]
+
+      ???
+
+      example app 2
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/fmDg9CL.png)]
+
+      ???
+
+      calls it within larger architecture
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/Y2l2VY1.png)]
+
+      ???
+
+      class that checks if it is a flat news command, or if it has query
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/gQqpqXT.png)]
+
+      ???
+
+      here's what query looks like. now what if they format something incorrect?
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/ctthrkl.png)]
+
+      ???
+
+
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/htQEA0G.png)]
+
+      ???
+
+      Or what if you explicitly do not know what to do?
+
+      ---
+      WHERE I LEFT OFF. TALK ARCHITECTURE AND THEEEEEN NEXT TWO SERVICES AND GOING FORWARD
+      template: primary-slide
+      class: center, middle
+
+      ## How do we extend from here?
+
+      ???
+
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/1VDBp2J.png)]
+
+      ???
+
+      Encapsulate into services
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/Gnlzf5O.png)]
+
+      ???
+
+      If it fails, it stops, if not, it continues
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/1VDBp2J.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/7CI1oyX.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/ueA13C6.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/dbAAq1m.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/n88D0Sg.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/8Z9Pj8b.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/0MUc0Jh.png)]
+
+      ???
+
+      ---
+      template: primary-slide
+      class: center, middle
+
+      .center[![:scale 100%](https://i.imgur.com/euX8c6F.png)]
+
+      ???
+
       ---
       template: primary-slide
       class: center, middle
       # .strong[3]
-      # Outcomes and Retrospectives
-      ---
-      template: primary-slide
-      class: top
-      #.center[How we view pain]
-
-      ###.left[Pain is incredibly subjective]
-      ###.left[Hospital tried to make it objective]
-      ###.left[Laura had become *very* good at monitoring pain to her standard]
-      ###.left[< 5? no relief for you!]
-      ###.left[Adjustment for the race to the top]
-
-      ---
-      template: primary-slide
-
-      class: center, top
-      # Making things mobile
-      --
-
-      ### .left[Manual coordinate resets]
-      --
-
-      ### .left[Benefit from location data, maybe]
+      # Going forward
 
       ---
       template: primary-slide
       class: center, middle
-      # How do we best process this information?
 
-      ---
-      template: primary-slide
-
-      # Dump information into a two dimensional array
-
-      ```ruby
-      def valid_readings(pain_level)
-        pain_level > 0.0 && pain_level < 10.0
-      end
-
-      array = []
-      DataPoint.all.each do |dp|
-        if valid_readings(dp.pain_level)
-          array << [dp.barometric_pressure, dp.pain_level]
-        end
-      end
-      ```
-      ---
-      template: primary-slide
-
-      # Write to CSV
-
-      ```ruby
-      require 'csv'
-      CSV.open("laura_stats.csv", "w") do |csv|
-        array.map{|row| csv << row}
-      end
-      ```
+      .center[![:scale 100%](https://i.imgur.com/xAaZhwL.png)]
 
       ???
-
-      Possible chopping block if tight
-      ---
-      template: primary-slide
-      class: center, top
-      # Visualize with a Graph
-
-      .center[![:scale 80%](https://i.imgur.com/dm7Sp4M.png)]
-
-      ---
-      template: primary-slide
-
-      # SVM in Ruby
-
-      .center[![:scale 100%](https://i.imgur.com/IB1YGUE.png)]
-
-      ???
-
-      Support Vector Machine (SVM) is a supervised learning algorithm
-
-      Take in a set of training data of varying types, makes predictions with a set
-      of methodologies that someone could probably do a 45 minute talk on themselves.
-
-      Shout out to practicalai.com. With posts under a year old that focus on
-      various different real implmentations of ruby against real data using
-      different AI techniques
-
-      ---
-      template: primary-slide
-
-      # Giving props 👏
-
-      ### (`daugaard/example-svm`)
-
-      ![:scale 90%](https://i.imgur.com/UVskqfI.png)
-
-      ???
-
-      Discuss finding blog post on ruby weekly,
-
-      WHY DOES THIS ONLY HAVE THREE STARS!?
-
-      ---
-      template: primary-slide
-
-      # Finding the 'best' C and Gamma values
-
-      #![:scale 100%](https://i.imgur.com/L3OKGwB.png)
-
-      ???
-
-      C: a larger C will give you lower bias and higher variance a model will have, where a low C will give you high bias and low variance.
-
-      Gamma: defines how far a single training example will have influence
-      ---
-      template: primary-slide
-
-      # Best results I could garner:
-      <br>
-      ### .center[ Test Generalization Accuracy: .strong[24.43%]]
-      ### .center[ C=5, gamma=1]
-
-      ---
-      template: primary-slide
-
-      # What if I cared more about 'close' than 'exact?'
-      ```ruby
-      correct = predicted.collect.with_index do |e,i|
-        if (e.to_f - validation_y_data[i].to_f).magnitude <= 1.0
-          1
-        else
-          0
-        end
-      end.inject{ |sum,e| sum+e }
-      ```
-      ---
-      template: primary-slide
-      # Within 1:
-      --
-
-      ### Test Generalization Accuracy: <u>.strong[60.34%]</u>
-
-      --
-
-      # Within 2:
-
-      --
-
-      ### Test Generalization Accuracy: <u>.strong[89.66%]</u>
-
-      ---
-      template: primary-slide
-      # One more takeaway
-
-      .center[![:scale 90%](https://i.imgur.com/dm7Sp4M.png)]
-
-      ???
-
-      Nothing under 4 over certain pressure
-
-      ---
-      template: primary-slide
-
-      # Other thoughts on the future:
-
-      --
-
-      ### Measure 'closeness'
-
-      ### Increase dataset size
-
-      ### Publish dataset for analysis from fellow Rubyists
-
-      ### WIP: Forecasting
-
-      ???
-
-      Also did a logistic regression approach which I will be publishing along with the slides
 
       ---
       template: primary-slide
       class: center, middle
-      # .strong[4]
-      # Using our superpower, for good
 
-      ---
-      template: primary-slide
-      class: center, top
-      ### It's not a choice between 'working for the man' and 'toy projects'
-      --
+      .center[![:scale 100%](https://i.imgur.com/hSfcpeV.png)]
 
-      ### Not everyone can do what you do
-      --
-
-      ### What is a few minutes of mindless scripting for you may be life changing for someone else
-      --
-
-      ### New tooling opportunities and experience
+      ???
 
       ---
       template: primary-slide
@@ -842,6 +485,9 @@
       template: primary-slide
 
       # Thanks for your time!
+
+      ## +44 1827 230264
+
       ### schwad.github.io (slides will be published here)
       ### @schwad4hd14 (twitter)
       ### @schwadererer (insta)

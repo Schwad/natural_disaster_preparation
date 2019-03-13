@@ -1,17 +1,15 @@
 class News
   attr_reader :type, :message, :query
 
-  def initialize(type, query=nil)
-    @type = type
-    @query = query
+  def initialize(command)
+    @query = command.split(",")[1]
   end
 
   def call
-    case type
-    when 'british'
-      british_headlines
-    when 'query'
+    if @query
       queried_headlines
+    else
+      british_headlines
     end
   end
 
