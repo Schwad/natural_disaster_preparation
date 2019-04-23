@@ -1,0 +1,173 @@
+and now we're going to take a short break to hear from our sponsor", pause for a few seconds, then announce "we're back"
+
+
+- Senior Production Engineer Shopify
+- Ruby Kaigi
+- Rails Conf
+- 43 commits on Rails core
+
+Rails 6 Podcast Notes
+
+Upgrading Pt 1.
+
+
+Features Pt 2.
+
+ActionMailbox xxxxx
+  - https://edgeguides.rubyonrails.org/action_mailbox_basics.html xxxx
+
+ActionText xxxxx
+  - https://edgeguides.rubyonrails.org/action_text_overview.html xxxx
+
+Parallel_tests xxxxxxxxxx
+  - https://github.com/rails/rails/pull/31900
+  - eileen uchitelle
+  - docs: https://github.com/rails/rails/pull/31900/files
+  - as of march Eileen said was focused for MiniTest and that it was very early so hopefully rspec support soon. not sure if it supports rspec. Docs not updated in meaningful way.
+
+Webpacker as default xxxxxxxxxxxx
+  - just for js (not css/images/etc)
+  - but CAN make for all https://github.com/rails/webpacker
+  - I don't use webpack/yarn etc, just straight up JS, can you talk me through it
+
+Multiple database supportxxxx
+
+actioncable testing (connections, channels, broadcasts.) xxxxx
+
+Change rails system database with rake command xxxxxxxx
+- rails db:system:change
+
+Smaller Ones
+
+filtering sensitive parameters  xxxxxxxxxxxxx
+  -  ActiveRecord::Base::filter_attributes (from logs/console)
+
+time comparisons
+  - rental_1.starts_at.after? rental_2.ends_at # => true
+  - rental_1.starts_at.before? rental_2.ends_at # => false
+
+private method delegation
+  - delegate :full_name, to: :current_user, private: true
+
+- Per-environment Rails Credentials ( https://github.com/rails/rails/issues/31349 )
+  - backwards compatible
+  - environment overrides
+  - commented
+
+- relation#pick
+  - same as relation.pluck(:column).limit(1)
+
+#touch a collection
+
+- Array#extract!
+  - returns matchers and mutates array
+    my_array = [1,2,3,4]
+    my_array.extract! { |v| v > 2 } # => [3,4]
+    my_array == [1,2] # => true
+- ActionView Doesn't enforce UTF-8 by default
+  - argument is it doesn't pertain to browsers that aren't IE8 or newer
+  -https://github.com/rails/rails/pull/32125/files
+
+- ActiveStorage::Blob#open, downloads a blob to a tempfile on disk and yields the tempfile
+
+
+- Require Ruby 2.5
+- update_attributes! & update_attributes deprecated
+
+- Driftingruby shownotes link for deprecations
+- changelog links
+
+Shownotes:
+
+Ruby Kaigi: https://www.youtube.com/watch?v=Lu5aHMxldmg
+Rails conf: https://www.youtube.com/watch?v=N2B5V4ozc6k
+Twitter: https://twitter.com/DaroudeDudek
+Github: https://github.com/Edouard-chin
+
+
+
+
+#####################
+
+ActionMailer
+
+- Deprecate ActionMailer::Base.receive in favor of Action Mailbox.
+
+Add MailDeliveryJob for delivering both regular and parameterized mail. Deprecate using DeliveryJob and Parameterized::DeliveryJob.
+
+ActionPack
+Remove deprecated fragment_cache_key helper in favor of combined_fragment_cache_key.
+
+Remove deprecated methods in ActionDispatch::TestResponse.
+#success?, missing? and error? were deprecated in Rails 5.2 in favor of #successful?, not_found? and server_error?.
+
+Deprecate ActionDispatch::Http::ParameterFilter in favor of ActiveSupport::ParameterFilter.
+
+Controller level force_ssl has been deprecated in favor of config.force_ssl.
+
+ActionView
+Remove deprecated image_alt helper.
+
+Deprecate calling private model methods from view helpers.
+For example, in methods like options_from_collection_for_select and collection_select it is possible to call private methods from the objects used.
+
+ActiveRecord
+Remove deprecated #set_state from the transaction object.
+
+Remove deprecated #supports_statement_cache? from the database adapters.
+
+Remove deprecated #insert_fixtures from the database adapters.
+
+Remove deprecated ActiveRecord::ConnectionAdapters::SQLite3Adapter#valid_alter_table_type?.
+
+Deprecate config.activerecord.sqlite3.represent_boolean_as_integer.
+
+Remove deprecated ActiveRecord::Migrator.migrations_path=.
+
+Remove deprecated expand_hash_conditions_for_aggregates.
+
+Deprecate passing migrations_paths to connection.assume_migrated_upto_version.
+
+Deprecate ActiveRecord::Result#to_hash in favor of ActiveRecord::Result#to_a.
+
+Deprecate column_name_length, table_name_length, columns_per_table, indexes_per_table, columns_per_multicolumn_index, sql_query_length, and joins_per_query methods in DatabaseLimits.
+
+Deprecate update_attributes/! in favor of update/!.
+
+ActiveStorage
+Replace config.active_storage.queue with two options that indicate which queues analysis and purge jobs should use, respectively:
+
+config.active_storage.queues.analysis
+config.active_storage.queues.purge
+config.active_storage.queue is preferred over the new options when it’s set, but it is deprecated and will be removed in Rails 6.1.
+
+Add ActiveStorage::Blob#open, which downloads a blob to a tempfile on disk and yields the tempfile. Deprecate ActiveStorage::Downloading.
+
+Use the ImageProcessing gem for Active Storage variants, and deprecate the MiniMagick backend.
+
+This means that variants are now automatically oriented if the original image was rotated. Also, in addition to the existing ImageMagick operations, variants can now use :resize_to_fit, :resize_to_fill, and other ImageProcessing macros. These are now recommended over raw :resize, as they also sharpen the thumbnail after resizing.
+
+The ImageProcessing gem also comes with a backend implemented on libvips, an alternative to ImageMagick which has significantly better performance than ImageMagick in most cases, both in terms of speed and memory usage. In Active Storage it’s now possible to switch to the libvips backend by changing Rails.application.config.active_storage.variant_processor to :vips.
+
+ActiveSupport
+Remove deprecated Module#reachable? method.
+
+Remove deprecated #acronym_regex method from Inflections.
+
+Deprecate ActiveSupport::Multibyte::Unicode#pack_graphemes(array) and ActiveSuppport::Multibyte::Unicode#unpack_graphemes(string) in favor of array.flatten.pack("U*") and string.scan(/\X/).map(&:codepoints), respectively.
+
+Deprecate ActiveSupport::Multibyte::Chars.consumes? in favor of String#is_utf8?.
+
+Deprecate ActiveSupport::Multibyte::Unicode#normalize and ActiveSuppport::Multibyte::Chars#normalize in favor of String#unicode_normalize
+
+Deprecate ActiveSupport::Multibyte::Unicode#downcase/upcase/swapcase in favor ofString#downcase/upcase/swapcase.
+
+Deprecate the use of LoggerSilence in favor of ActiveSupport::LoggerSilence
+
+Deprecate using negative limits in String#first and String#last.
+
+Allow Range#=== and Range#cover? on Range.
+
+Range#cover? can now accept a range argument like Range#include? and Range#===. Range#=== works correctly on Ruby 2.6. Range#include? is moved into a new file, with these two methods
+
+Requiring active_support/core_ext/range/include_range is now deprecated. Use require "active_support/core_ext/range/compare_range" instead.
